@@ -76,7 +76,6 @@ WITH
   SELECT
   COALESCE(ly.actor, ty.actor) AS actor,
   COALESCE(ly.actor_id, ty.actor_id) AS actor_id,
-  COALESCE(ly.quality_class, ty.quality_class) AS quality_class,
   CASE
     WHEN ty.film_cnt = 0 THEN ly.films
     WHEN ty.films IS NOT NULL
@@ -84,6 +83,7 @@ WITH
     WHEN ty.films IS NOT NULL
     AND ly.films IS NOT NULL THEN ty.films || ly.films
   END AS films,
+  COALESCE(ly.quality_class, ty.quality_class) AS quality_class,
   ty.film_cnt > 0 AS is_active,
   COALESCE(ty.year, ly.current_year + 1) AS current_year
 FROM
