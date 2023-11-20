@@ -44,7 +44,7 @@ WITH
         ELSE 'bad'
       END AS quality_class,
       COUNT(film) AS film_cnt,
-      ARRAY_AGG(ROW (film, votes, rating, film_id)) AS films
+      ARRAY_AGG(CAST(ROW (film, votes, rating, film_id) AS ROW(film VARCHAR, votes INTEGER, rating DOUBLE, filmid VARCHAR))) as films
     FROM
       actor_years AY
       LEFT JOIN bootcamp.actor_films AF ON AY.yr = AF.year
@@ -63,19 +63,20 @@ WITH
     FROM
       stalwai.actors
     WHERE
-      current_year = 1915
+      current_year = 1930
   ),
- 
+
   this_year as (  SELECT
       *
     FROM
       actor_films_cte
     WHERE
-      YEAR = 1916
+      YEAR = 1931
   )
   SELECT
   COALESCE(ly.actor, ty.actor) AS actor,
-  COALESCE(ly.actor_id, ty.actor_id) AS actor_id,
+  COALESCE(ly.actor_id, ty.actor_id) AS actorid,
+  COALESCE(ly.quality_class, ty.quality_class) AS quality_class,
   CASE
     WHEN ty.film_cnt = 0 THEN ly.films
     WHEN ty.films IS NOT NULL
@@ -83,10 +84,10 @@ WITH
     WHEN ty.films IS NOT NULL
     AND ly.films IS NOT NULL THEN ty.films || ly.films
   END AS films,
-  COALESCE(ly.quality_class, ty.quality_class) AS quality_class,
   ty.film_cnt > 0 AS is_active,
   COALESCE(ty.year, ly.current_year + 1) AS current_year
 FROM
   last_year ly
   FULL OUTER JOIN this_year ty ON ly.actor = ty.actor
   
+
