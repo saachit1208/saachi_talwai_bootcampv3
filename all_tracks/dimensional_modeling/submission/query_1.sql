@@ -1,3 +1,5 @@
+/* DDL for actors */
+
 CREATE TABLE stalwai.actors 
   ( actor varchar, 
     actorid varchar,
@@ -5,4 +7,5 @@ CREATE TABLE stalwai.actors
     quality_class varchar,
     is_active boolean, 
     current_year integer ) 
-  WITH ( format = 'PARQUET',  partitioning = ARRAY['current_year'] )
+    WITH ( format = 'PARQUET',  partitioning = ARRAY['current_year'] 
+  )
