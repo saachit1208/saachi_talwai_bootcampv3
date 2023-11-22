@@ -1,3 +1,7 @@
+/* Incrementally populating actors table */
+/* Currently populate from 1914 to 1940 */
+/* This query will populate it with year 1941 entries */
+
 INSERT INTO stalwai.actors 
 WITH
   distinct_years AS (
@@ -63,7 +67,7 @@ WITH
     FROM
       stalwai.actors
     WHERE
-      current_year = 1930
+      current_year = 1940
   ),
 
   this_year as (  SELECT
@@ -71,12 +75,11 @@ WITH
     FROM
       actor_films_cte
     WHERE
-      YEAR = 1931
+      YEAR = 1941
   )
   SELECT
   COALESCE(ly.actor, ty.actor) AS actor,
-  COALESCE(ly.actor_id, ty.actor_id) AS actorid,
-  COALESCE(ly.quality_class, ty.quality_class) AS quality_class,
+  COALESCE(ly.actorid, ty.actor_id) AS actorid,
   CASE
     WHEN ty.film_cnt = 0 THEN ly.films
     WHEN ty.films IS NOT NULL
@@ -84,10 +87,11 @@ WITH
     WHEN ty.films IS NOT NULL
     AND ly.films IS NOT NULL THEN ty.films || ly.films
   END AS films,
+   COALESCE(ly.quality_class, ty.quality_class) AS     quality_class,
   ty.film_cnt > 0 AS is_active,
   COALESCE(ty.year, ly.current_year + 1) AS current_year
 FROM
   last_year ly
-  FULL OUTER JOIN this_year ty ON ly.actor = ty.actor
+  FULL OUTER JOIN this_year ty ON ly.actor = ty.actor AND ly.actorid = ty.actor_id
   
 
