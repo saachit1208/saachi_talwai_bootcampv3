@@ -1,3 +1,5 @@
+/* DDL for actors_history_scd */
+
 CREATE TABLE stalwai.actors_history_scd 
   ( actor varchar, 
     actorid varchar, 
