@@ -1,7 +1,8 @@
 /* Incrementally add data for year 1940 into actors_history_scd from actors table */
 /* Done for year 1940 */
 
-INSERT INTO stalwai.actors_history_scd
+INSERT INTO
+  stalwai.actors_history_scd
 WITH
   last_year_scd AS (
     SELECT
@@ -26,17 +27,21 @@ WITH
       COALESCE(ly.start_date, cy.current_year) AS start_date,
       COALESCE(ly.end_date, cy.current_year) AS end_date,
       CASE
-        WHEN ly.is_active <> cy.is_active OR ly.quality_class <> cy.quality_class THEN 1
-        WHEN ly.is_active = cy.is_active  AND ly.quality_class = cy.quality_class THEN 0
+        WHEN ly.is_active <> cy.is_active
+        OR ly.quality_class <> cy.quality_class THEN 1
+        WHEN ly.is_active = cy.is_active
+        AND ly.quality_class = cy.quality_class THEN 0
       END AS did_change,
       cy.quality_class AS quality_class_this_year,
       ly.quality_class AS quality_class_last_year,
       ly.is_active AS is_active_last_year,
       cy.is_active AS is_active_this_year,
-      1932 AS current_year
+      1940 AS current_year
     FROM
       last_year_scd ly
-      FULL OUTER JOIN current_year_scd cy ON ly.actor = cy.actor AND ly.actorid = cy.actorid AND ly.end_date + 1 = cy.current_year
+      FULL OUTER JOIN current_year_scd cy ON ly.actor = cy.actor
+      AND ly.actorid = cy.actorid
+      AND ly.end_date + 1 = cy.current_year
   ),
   changes AS (
     SELECT
@@ -60,7 +65,12 @@ WITH
         ]
         WHEN did_change = 1 THEN ARRAY[
           CAST(
-            ROW (quality_class_last_year, is_active_last_year, start_date, end_date) AS ROW (
+            ROW (
+              quality_class_last_year,
+              is_active_last_year,
+              start_date,
+              end_date
+            ) AS ROW (
               quality_class VARCHAR,
               is_active BOOLEAN,
               start_date INTEGER,
@@ -112,3 +122,4 @@ SELECT
 FROM
   changes
   CROSS JOIN UNNEST (change_array) AS arr
+     
