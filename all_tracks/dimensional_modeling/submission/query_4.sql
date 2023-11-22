@@ -1,3 +1,6 @@
+/* Single backfill to load actors_history_scd till 1939 */
+/* Did this because actors is loaded till 1940 */
+/* Will incrementall add data for year 1940 in the next query (query 5) */
 INSERT INTO stalwai.actors_history_scd
 WITH
   lagged AS (
@@ -28,7 +31,7 @@ WITH
     FROM
       stalwai.actors
     WHERE
-      current_year <= 1931
+      current_year <= 1939
   ),
   streaked AS (
     SELECT
@@ -61,3 +64,4 @@ GROUP BY
   actor,
   actorid,
   streak_identifier
+
