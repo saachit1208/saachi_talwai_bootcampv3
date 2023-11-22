@@ -57,7 +57,7 @@ SELECT
   MAX(is_active) = 1 AS is_active,
   MIN(current_year) AS start_year,
   MAX(current_year) AS end_year,
-  1931 AS current_year
+  1939 AS current_year
 FROM
   streaked
 GROUP BY
