@@ -1,3 +1,6 @@
+/* Incrementally add data for year 1940 into actors_history_scd from actors table */
+/* Done for year 1940 */
+
 INSERT INTO stalwai.actors_history_scd
 WITH
   last_year_scd AS (
