@@ -9,7 +9,7 @@ WITH
     FROM
       stalwai.actors_history_scd
     WHERE
-      current_year = 1931
+      current_year = 1939
   ),
   current_year_scd AS (
     SELECT
@@ -17,7 +17,7 @@ WITH
     FROM
       stalwai.actors
     WHERE
-      current_year = 1932
+      current_year = 1940
   ),
   combined AS (
     SELECT
