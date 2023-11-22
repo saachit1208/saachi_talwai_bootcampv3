@@ -1,5 +1,5 @@
 /* Incrementally populating actors table */
-/* Currently populate from 1914 to 1940 */
+/* Currently populated from 1914 to 1940 */
 /* This query will populate it with year 1941 entries */
 
 INSERT INTO stalwai.actors 
