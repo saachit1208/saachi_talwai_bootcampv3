@@ -69,21 +69,12 @@ SELECT
   team_id,
   team_abbreviation,
   games_won
-FROM
+FROM aggregated_cte where games_won = 
   (
-    SELECT
-      team_id,
-      team_abbreviation,
-      games_won,
-      DENSE_RANK() OVER (
-        ORDER BY
-          games_won DESC
-      ) AS RANK
+  SELECT max(games_won)
     FROM
       aggregated_cte
     WHERE
       player_id IS NULL
       AND season IS NULL
   )
-WHERE
-  RANK = 1
