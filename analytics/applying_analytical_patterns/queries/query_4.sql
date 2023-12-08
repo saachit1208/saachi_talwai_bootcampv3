@@ -65,30 +65,12 @@ WITH
         (team_id, team_abbreviation)
       )
   )
-SELECT
-  player_name,
-  player_id,
-  season,
-  total_pts
-FROM
-  (
-    SELECT
-      player_name,
-      player_id,
-      season,
-      total_pts,
-      DENSE_RANK() OVER (
-        PARTITION BY
-          season
-        ORDER BY
-          total_pts DESC
-      ) AS RANK
+SELECT 
+    player_id, player_name, total_pts from aggregated_cte where team_id is NULL and total_pts = 
+  ( SELECT 
+      MAX(total_pts)
     FROM
       aggregated_cte
     WHERE
       team_id IS NULL
-  )
-WHERE
-  RANK = 1
-ORDER BY
-  season
+ )
