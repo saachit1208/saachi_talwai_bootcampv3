@@ -1,3 +1,4 @@
+------ Query 2 Final -------
 WITH
   check_dupes AS (
     SELECT
@@ -32,8 +33,8 @@ SELECT
   player_id,
   player_name,
   season,
-  COUNT(
-    DISTINCT CASE
+  COUNT (
+  DISTINCT  CASE
       WHEN home_team_id = team_id
       AND home_team_wins = 1 THEN game_id
       WHEN visitor_team_id = team_id
