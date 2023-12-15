@@ -1,4 +1,4 @@
-----Which player scored the most points in one season?----
+---- Query 4: Which player scored the most points in one season?----
 WITH
   check_dupes AS (
     SELECT
@@ -66,12 +66,20 @@ WITH
         (team_id, team_abbreviation)
       )
   )
-SELECT 
-    player_id, player_name, total_pts from aggregated_cte where team_id is NULL and total_pts = 
-  ( SELECT 
+SELECT
+  player_id,
+  player_name,
+  total_pts,
+  season
+FROM
+  aggregated_cte
+WHERE
+  team_id IS NULL
+  AND total_pts = (
+    SELECT
       MAX(total_pts)
     FROM
       aggregated_cte
     WHERE
       team_id IS NULL
- )
+  )
