@@ -6,6 +6,7 @@ from pyflink.table.expressions import lit, col
 from pyflink.table.window import Tumble, Session
 
 
+# Postgres sink storing sessionized data 
 def create_aggregated_events_sink_postgres(t_env):
     table_name = 'processed_events_aggregated'
     sink_ddl = f"""
@@ -26,6 +27,7 @@ def create_aggregated_events_sink_postgres(t_env):
     t_env.execute_sql(sink_ddl)
     return table_name
 
+# Kafka source
 def create_processed_events_source_kafka(t_env):
     table_name = "process_events_kafka"
     pattern = "yyyy-MM-dd HH:mm:ss"
@@ -70,9 +72,11 @@ def log_aggregation():
     t_env = StreamTableEnvironment.create(env, environment_settings=settings)
 
     try:
-        # Create Kafka table
+        
         source_table = create_processed_events_source_kafka(t_env)
         aggregated_table = create_aggregated_events_sink_postgres(t_env)
+
+        #Using Session window of 5 minutes to insert data into the postgres sink, grouped by session window, ip and host
         t_env.from_path(source_table)\
             .window(
             Session.with_gap(lit(5).minutes).on(col("window_timestamp")).alias("w")
