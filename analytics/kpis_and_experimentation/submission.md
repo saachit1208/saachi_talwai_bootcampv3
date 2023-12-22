@@ -29,7 +29,7 @@ Accessing lyrics while listening to tracks allows for a more immersive experienc
 
 #### Experiment 1: Collaborative Playlist Creation
 
-Objective: Assess the impact of introducing a "Add Collaborators" button for playlist creation on user engagement metrics including click-through rates, social interactions, and user retention within YouTube Music.
+Objective: Assess the impact of introducing a "Add Collaborators" button for playlist creation on user engagement metrics.
 
 Changes: Implement a feature enabling users to add collaborators to playlists via an "Add Collaborators" button, fostering shared curation experiences.
 
@@ -50,30 +50,34 @@ Leading Metrics:
 Lagging Metrics:
 
  - User feedback and ratings on the collaborative playlist feature
- - User retention rates post-feature introduction
+ - User retention rates post-feature introduction 
 
-### Experiment 2
+### Experiment 2: Upcoming and Lesser-known Artists Card in Explore Section
 
-Changes: [Enter your proposed changes for the new feature here.]
+Objective: Assess the impact of introducing a dedicated card for upcoming and lesser-known artists within the 'Explore' section on user engagement metrics.
 
-Hypothesis: [Enter your hypothesis about what the result of making the new changes will be.]
+Changes: Implement a new card called "upcoming" featuring new and lesser-known artists prominently displayed within the 'Explore' section, providing users an avenue to discover emerging talents and diverse music genres.
 
-Test cell allocation:
+Hypothesis: The introduction of a specialized card showcasing upcoming and lesser-known artists in the 'Explore' tab will diversify user music exploration, potentially increasing engagement and discovery of emerging music trends and genres.
 
-- Control (no feature) - [Enter your % allocation to this group]
-- [Test cell 1 name] - [Enter your % allocation to this group]
-- ...
+Test Cell Allocation:
+
+ - Control (current Explore section layout): 40%
+- Upcoming and Lesser-known Artists Card in Explore tab: 60%
 
 Leading Metrics:
 
-- [Enter your leading metrics here]
-- ...
-
+- Click-through rate on the 
+- Interaction depth within the card - number of artists explored, songs previewed, or profiles visited
+- Conversion rate: users interacting with the card and subsequently creating playlists or saving tracks/artists
+- Bounce rate: users landing on the card but leaving the 'Explore' sectuon without further engagement)
+ 
 Lagging Metrics:
 
-- [Enter your lagging metrics here]
-- ...
-
+ - User feedback and ratings on the new artist card
+ - User retention rates post-feature introduction
+ - Impact on overall user engagement across the platform (changes in daily active users, session durations, etc., attributed to the new card)
+   
 ### Experiment 3
 
 Changes: [Enter your proposed changes for the new feature here.]
