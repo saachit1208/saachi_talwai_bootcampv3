@@ -18,7 +18,7 @@ YouTube Music excels in aligning with my daily rhythm, especially as I work remo
 Youtube Music is a gateway to discovering diverse artists and genres. The personalized recommendations introduce me to musicians I might have otherwise missed, broadening my musical horizons and constantly surprising me with really good finds.
 
 #### Curation:
-The platform also empowers my creative side through playlist curation. Crafting playlists tailored to specific moments or emotions has become a delightful outlet. Whether it's curating a LoFi playlist for a peaceful afternoon or compiling tracks for an upbeat workout session or a vibrant house party, YouTube Music consistently delivers the ideal soundtrack for diverse occasions. It's not just a music app; it's a companion that understands my musical preferences, making each moment more vibrant and enjoyable.
+The platform also empowers my creative side through playlist curation. Crafting playlists tailored to specific moments or emotions has become a delightful outlet. Whether it's curating a LoFi playlist for a peaceful afternoon or compiling tracks for an upbeat workout session or a vibrant house party, YouTube Music consistently delivers the ideal soundtrack for diverse occasions.
 
 #### Lyrics Integration:
 A notable feature I appreciate in YouTube Music is the availability of lyrics for a wide range of songs. 
