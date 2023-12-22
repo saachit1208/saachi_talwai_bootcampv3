@@ -56,7 +56,7 @@ Lagging Metrics:
  - Conversion rate from free to premium subscriptions post-feature implementation
  - Impact on overall user engagement across the platform (changes in daily active users, session durations)
 
-#### Experiment 2: Lyrics Snippet Feature
+### Experiment 2: Lyrics Snippet Feature
 
 Objective: Assess the impact of introducing a "Lyrics Snippet" feature on user engagement within YouTube Music.
 
