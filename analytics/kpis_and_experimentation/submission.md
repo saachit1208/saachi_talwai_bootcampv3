@@ -37,18 +37,20 @@ Hypothesis: The introduction of the "Add Collaborators" button will not only enh
 
 Test Cell Allocation:
 
-Control Group (Current playlist features): 40%
-Experimental Group (Add Collaborators button for playlist creation): 60%
+- Control(Current playlist features): 40%
+- Add Collaborators button for playlist creation: 60%
+
+
 Leading Metrics:
 
-Click-through rates on playlists with the "Add Collaborators" feature
-Number of collaborative playlists created
-Percentage increase in user interactions with shared playlists
+- Click-through rates on playlists with the "Add Collaborators" feature
+- Number of collaborative playlists created
+- Percentage increase in user engagement with shared playlists
 
 Lagging Metrics:
 
-User feedback and ratings on the collaborative playlist feature
-User retention rates post-feature introduction
+ - User feedback and ratings on the collaborative playlist feature
+ - User retention rates post-feature introduction
 
 ### Experiment 2
 
