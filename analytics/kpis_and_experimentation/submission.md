@@ -5,11 +5,9 @@
 
 ### Product: Youtube Music
 
-YouTube Music has become an integral part of my life over the past few years. I tansitioned from being a Spotify Premium user to solely using Youtube Music. This switch was influenced by my peers. 
+YouTube Music has become an integral part of my life over the past few years. I transitioned from being a Spotify Premium user to solely using Youtube Music. This switch was influenced by my peers. 
 As conversations around me echoed the superiority of YouTube Music and its recommendations, it piqued my curiosity until I finally made the switch. Since it has around the same monthly subscription fee as Spotify Premium, it made my decision easier. 
 In my opionion it does have a stronger recommendation algorithm than Spotify, since it has a lots more data about your preferences to learn from, right from when Youtube Video started. 
-Over time the music app has seamlessly made its way into my lifestyle, becoming my ultimate music companion for various activities and moods.
-
 
 #### Moods and Preferences:
 YouTube Music excels in aligning with my daily rhythm, especially as I work remotely. It serves as the constant background, accompanying me throughout the day. From the energizing tunes that kick-start my mornings to the calming melodies that wind down my evenings, the app seamlessly adapts to my ever-changing preferences. During the day, it offers tracks that match my pace, keeping me focused and invigorated. As dusk settles in, the transition to tranquil and meditative music perfectly complements my winding-down routine, aiding relaxation before bedtime.
