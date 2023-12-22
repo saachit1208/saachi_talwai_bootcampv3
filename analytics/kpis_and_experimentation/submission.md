@@ -66,8 +66,8 @@ Hypothesis: By providing the ability to save and interact with specific song lyr
 
 Test Cell Allocation:
 
-Control (no Lyrics Snippet feature): 50%
-Lyrics Snippet Integration: 50%
+- Control (no Lyrics Snippet feature): 50%-
+- Lyrics Snippet Integration: 50%
 
 Leading Metrics:
 
