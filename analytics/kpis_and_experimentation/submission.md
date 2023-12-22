@@ -82,7 +82,7 @@ Lagging Metrics:
  - Percentage increase in playlist saves or song downloads by users interacting with the Lyrics Snippet feature
 
    
-#### Experiment 3: Collaborative Playlist Creation Button
+### Experiment 3: Collaborative Playlist Creation Button
 
 Objective: Assess the impact of introducing a "Add Collaborators" button for playlist creation on user engagement metrics.
 
