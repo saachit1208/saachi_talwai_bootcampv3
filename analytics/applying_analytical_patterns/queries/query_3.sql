@@ -1,4 +1,5 @@
 ------Which player scored the most points playing for a single team?----
+----Answer: Player: Lebron James, Team Abbreviation: CLE -----
 WITH
   check_dupes AS (
     SELECT
