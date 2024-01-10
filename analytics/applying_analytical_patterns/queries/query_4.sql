@@ -1,4 +1,5 @@
 ---- Query 4: Which player scored the most points in one season?----
+---Answer: Player:Kevin Durant	Points:3265	Season:2013----
 WITH
   check_dupes AS (
     SELECT
