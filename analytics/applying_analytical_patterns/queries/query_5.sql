@@ -1,3 +1,5 @@
+-------Which team has won the most games---------
+-----Answer: Team Abbreviation:SAS	Games Won:1182 ----------------
 WITH
   check_dupes AS (
     SELECT
