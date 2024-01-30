@@ -42,7 +42,7 @@ Test Cell Allocation:
 
 Leading Metrics:
 
-- Click-through rate on the 
+- Click-through rate on the card
 - Interaction depth within the card - number of artists explored, songs previewed, or profiles visited
 - Conversion rate: users interacting with the card and subsequently creating playlists or saving tracks/artists
 - Bounce rate: users landing on the card but leaving the 'Explore' section without further engagement)
